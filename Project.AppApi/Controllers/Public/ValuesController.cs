@@ -6,7 +6,7 @@ namespace Project.AppApi.Controllers
 	/// <summary>
 	/// 自动生成模板
 	/// </summary>
-	[ApiExplorerSettings(IgnoreApi = false)]
+	[ApiExplorerSettings(IgnoreApi = true)]
 	[Route("api/[controller]")]
 	[ApiController]
 	public class ValuesController : BaseController

@@ -25,8 +25,19 @@ namespace Project.AppApi.Controllers
 
         #region Apple操作
         #region 创建
-
-
+        /// <summary>
+        ///  创建AppleWallet文件
+        /// </summary>
+        /// <param name="SerialNumber">编号，传递便是修改</param>
+        /// <returns></returns>
+        [Route("/api/wallet/create-passkit")]
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> CreatePassKit([FromForm] string SerialNumber)
+        {
+            string res = await walletPassService.PassCreateAsync(SerialNumber, HttpContext);
+            return Ok(res);
+        }
         #endregion
 
         #region 下载
@@ -193,6 +204,7 @@ namespace Project.AppApi.Controllers
             }
         }
         #endregion
+
         #endregion
 
         #region Google操作

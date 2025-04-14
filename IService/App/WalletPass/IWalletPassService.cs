@@ -17,6 +17,15 @@ namespace Service.App
     {
 
         #region Apple操作
+        #region 创建/更新
+        /// <summary>
+        ///  AppleWallet生成/更新信息
+        /// </summary>
+        /// <param name="serialNumber">唯一编号</param>
+        /// <param name="httpContext">请求信息,用于记录</param>
+        /// <returns></returns>
+        Task<string> PassCreateAsync(string serialNumber,HttpContext httpContext);
+        #endregion
 
         #region 下载
         /// <summary>
@@ -72,6 +81,8 @@ namespace Service.App
         /// <returns></returns>
         Task<IActionResult> PassReFresh(string passTypeIdentifier, string serialNumber, string Authorization);
         #endregion
+
+       
 
         #endregion
     }

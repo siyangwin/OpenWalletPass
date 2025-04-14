@@ -26,4 +26,10 @@ Apple官方文档：https://developer.apple.com/documentation/walletpasses/creat
 7. Apple回调API，通知用户已经手动删除Passkit文件，触发解绑。
 8. Apple回调API，发送Log信息给后台。
 
+注意：需要在Apple开发者后台申请Passkit项目和Passkit证书
+1. 获取PassTypeIdentifier和TeamIdentifier
+2. 导出p12文件设置证书密码
+   将以上信息填入appsettings.json
+   将p12文件放入Cer文件夹，重命名为：pass.p12
+
 ### Google示例
